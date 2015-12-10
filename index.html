@@ -234,7 +234,7 @@
             $('.date-day').text(day.toString());
             $('.date-time').text(time);
             $('.date-pm').text(ampm);
-            var pageViewParams = {limit: 10, type:'general', unit:'day', from: moment().subtract(30, 'days'), to: moment()}
+            var pageViewParams = {limit: 10, type:'general', unit:'day', from: moment().subtract(1, 'days'), to: moment()}
             var pageViewQuery = MP.api.segment('Workout Finished', 'Last workout', pageViewParams)
             pageViewQuery.done(function(results){
                 var data = {}
